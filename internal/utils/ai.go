@@ -139,7 +139,7 @@ func CallGeminiForRecommendations(prompt string) (*RecommendationResult, error) 
 		return nil, fmt.Errorf("❌ Failed to marshal payload: %v", err)
 	}
 
-	url := fmt.Sprintf("https://generativelanguage.googleapis.com/v1/models/gemini-1.5-flash:generateContent?key=%s", apiKey)
+	url := fmt.Sprintf("https://generativelanguage.googleapis.com/v1/models/gemini-2.5-flash:generateContent?key=%s", apiKey)
 
 	req, err := http.NewRequest("POST", url, bytes.NewBuffer(jsonData))
 	if err != nil {
