@@ -75,7 +75,7 @@ Resume:
 	}
 
 	// 5. Gemini API Key & Endpoint
-	url := fmt.Sprintf("https://generativelanguage.googleapis.com/v1/models/gemini-1.5-flash:generateContent?key=%s", config.AppConfig.GeminiAPIKey)
+	url := fmt.Sprintf("https://generativelanguage.googleapis.com/v1/models/gemini-2.5-flash:generateContent?key=%s", config.AppConfig.GeminiAPIKey)
 
 	// 6. Make HTTP request
 	resp, err := http.Post(url, "application/json", bytes.NewBuffer(jsonData))
